@@ -86,7 +86,7 @@ module.exports = {
             { from: "src/index.html" }
         ]),
         new webpack.DefinePlugin({
-            API_HOST: JSON.stringify("http://localhost:3010"),
+            API_HOST: JSON.stringify("http://35.224.54.61"),
         }),
         new HtmlWebpackPlugin({
             template: "./src/index.html",

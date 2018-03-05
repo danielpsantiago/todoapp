@@ -31,14 +31,14 @@ export default class Login extends  React.Component<IProps, {}> {
                 <Card
                     className={s.loginCard}
                     style={{ backgroundColor: materialColors.grey200, padding: "1px" }}
-                    containerStyle={{ height: "80%", display: "flex", alignItems: "center", justifyContent: "center" }} >
+                    containerStyle={{ width: "100%", height: "80%", display: "flex", alignItems: "center", justifyContent: "center" }} >
                     {
                         !this.props.authStore.isLoading ? (
                             <form className={s.loginForm} onSubmit={(e) => this.onSubmit(e)}>
                                 <div className={s.logo} /> 
-                                <TextField className={s.usernameTextField} onChange={(_, value) => this.props.authStore.setUsername(value)} hintText="Username" type="email" />
-                                <TextField className={s.passwordTextField} onChange={(_, value) => this.props.authStore.setPassword(value)} hintText="Password" type="password"/>
-                                <RaisedButton primary={true} type="submit" className={s.buttonLogin} label="Entrar" />
+                                <TextField className={s.usernameTextField}  style= {{width: "50%"}} onChange={(_, value) => this.props.authStore.setUsername(value)} hintText="Username" type="email" />
+                                <TextField className={s.passwordTextField} style= {{width: "50%"}} onChange={(_, value) => this.props.authStore.setPassword(value)} hintText="Password" type="password"/>
+                                <RaisedButton primary={true} type="submit" className={s.buttonLogin} style= {{width: "65%"}} label="Entrar" />
                                 <label className={s.loginErrorLabel}>{this.props.authStore.errorMessage}</label>
                             </form>
                         ) : 

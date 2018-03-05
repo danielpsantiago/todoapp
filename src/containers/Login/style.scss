@@ -1,31 +1,26 @@
 @import "global-style.scss";
 
 body {
+    width: 100vw;
+    height: 100vh;
     display: flex;
-    flex-direction: column;
-    align-content: center;
+    justify-content: center;
     align-items: center;
     .container {
-        display: flex;
-        justify-content: center;
         .loginCard {
-            box-sizing: content-box;
             width: 80vw;
             height: 80vh;
             display: flex;
-            flex-direction: column;
             justify-content: center;
+            align-items: center;
             .loginForm {
-                box-sizing: content-box;
                 width: 100%;
-                margin: auto;
+                height: 100%;
                 border-radius: 120px;
                 display: flex;
                 flex-direction: column;
                 align-items: center;
                 justify-content: center;
-                height: 100%;
-
                 .logo {
                     flex: 1 0 auto;
                     align-self: stretch;
@@ -35,7 +30,6 @@ body {
                     margin-bottom: 60px;
                     max-height: 250px;
                 }
-
                 .buttonLogin {
                     width: 50%;
                     display: flex;
@@ -44,13 +38,17 @@ body {
                     align-self: center;
                     margin-top: 20px;
                 }
-
+                .usernameTextField {
+                    width: 100%;
+                }
+                .passwordTextField {
+                    width: 100%;
+                }
                 .loginErrorLabel {
                     padding-top: 20px;
                     color: $red900;
                     font-size: 12pt
                 }
-
             }     
         }
     }
